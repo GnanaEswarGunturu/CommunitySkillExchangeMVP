@@ -8,6 +8,7 @@ import Register from './pages/Register';
 import Profile from './pages/Profile';
 import SearchSkills from './pages/SearchSkills';
 import ExchangeForm from './pages/ExchangeForm';
+import BookingPage from './pages/BookingPage'; // Add this import
 import Loading from './components/Loading';
 
 // Protected Route Component
@@ -88,6 +89,14 @@ function App() {
               element={
                 <ProtectedRoute>
                   <ExchangeForm />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/book/:teacherId"
+              element={
+                <ProtectedRoute>
+                  <BookingPage />
                 </ProtectedRoute>
               }
             />
